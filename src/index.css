@@ -10,6 +10,16 @@ body, html {
   height: 100%;
   
 }
+
+nav{
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  padding: 20px;
+  background: rgba(0, 70,89, 0.8);
+
+
+}
 #background-image {
   background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, .7) ), 
   url(https://mcdn.wallpapersafari.com/medium/35/42/yfJ3IF.jpg);
@@ -25,7 +35,7 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 32px;
+  padding-top: 20px;
  }
 .card-container {
   background: rgba(0, 70,89, 0.8);

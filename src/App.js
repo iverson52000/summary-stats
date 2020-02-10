@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import CardContainer from './card-container-component';
 
-
 class App extends Component {
   constructor(){
     super()
@@ -64,10 +63,10 @@ class App extends Component {
     this.state.tasks.forEach(t => {
       tasks[t.category].push(
         <div
-          className="item-container"
-          key={t.name}
+          className = "item-container"
+          key = {t.name}
           draggable
-          onDragStart={event => this.handleDragStart(event, t.name)}
+          onDragStart = {event => this.handleDragStart(event, t.name)}
         >
           {t.name}
         </div>
@@ -76,8 +75,9 @@ class App extends Component {
 
     return (
       <div>
-        <div id='background-image'></div>
-        <div className="container">
+        <div id = 'background-image'></div>
+        <nav>Trello Clone</nav>
+        <div className = "container">
           <CardContainer 
           dragOver = {this.handleDragOver}
           drop = {this.handleDrop} 
@@ -102,7 +102,7 @@ class App extends Component {
             placeholder = "Enter the task"
           />
           <div
-            className="trash-drop"
+            className = "trash-drop"
             onDrop = {event => this.handleDrop(event, "trash")}
             onDragOver = {event => this.handleDragOver(event)}
           >

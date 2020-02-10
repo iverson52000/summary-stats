@@ -1,2 +1,2 @@
-# TrelloClone build in React.js
+# TrelloClone built in React.js
 
