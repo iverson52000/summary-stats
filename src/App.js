@@ -39,7 +39,7 @@ class App extends Component {
     });
   };
 
-  handleKeyPress = event => {
+  handleKeyUp = event => {
     if ((event.key === "Enter") && (event.target.value !== "")) {
       this.setState({
         tasks: [
@@ -47,28 +47,32 @@ class App extends Component {
           { name: event.target.value, category: "todo" }
         ]
       });
-      event.target.value = " ";
+      event.target.value = "";
     }
+    if (event.key === 'Escape') {
+      event.target.value = "";
+    }
+    // console.log(event.target.value)
   };
 
 
   render() {
-    var tasks = {
+    var categories = {
       todo: [],
       working: [],
       complete: [],
       trash: []
     };
 
-    this.state.tasks.forEach(t => {
-      tasks[t.category].push(
+    this.state.tasks.forEach(task => {
+      categories[task.category].push(
         <div
           className = "item-container"
-          key = {t.name}
+          key = {task.name}
           draggable
-          onDragStart = {event => this.handleDragStart(event, t.name)}
+          onDragStart = {event => this.handleDragStart(event, task.name)}
         >
-          {t.name}
+          {task.name}
         </div>
       );
     });   
@@ -82,22 +86,23 @@ class App extends Component {
           dragOver = {this.handleDragOver}
           drop = {this.handleDrop} 
           category = 'todo' 
-          task = {tasks.todo}/>
+          task = {categories.todo}/>
           <CardContainer 
           dragOver = {this.handleDragOver}
           drop = {this.handleDrop} 
           category = 'working' 
-          task = {tasks.working}/>
+          task = {categories.working}/>
           <CardContainer 
           dragOver = {this.handleDragOver}
           drop = {this.handleDrop} 
           category = 'complete' 
-          task = {tasks.complete}/>
+          task = {categories.complete}/>
         </div>
         <div>
           <input
-            onKeyPress = {event => this.handleKeyPress(event)}
+            onKeyUp = {event => this.handleKeyUp(event)}
             className = "input"
+            id = 'inputText'
             type = "text"
             placeholder = "Enter the task"
           />

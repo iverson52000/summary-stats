@@ -12,14 +12,14 @@ body, html {
 }
 
 nav{
+  font-size: 20px;
   display: flex;
   justify-content: center;
   color: #fff;
   padding: 20px;
   background: rgba(0, 70,89, 0.8);
-
-
 }
+
 #background-image {
   background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, .7) ), 
   url(https://mcdn.wallpapersafari.com/medium/35/42/yfJ3IF.jpg);
@@ -45,10 +45,10 @@ nav{
   width: 33%;
   border-radius: 10px;
   transition: all .5s;
-
+/*
   &:hover {
     width: 36%;
-  }
+  }*/
 }
 .item-container {
   padding: 15px;
@@ -61,7 +61,7 @@ nav{
   border-radius: 4px;
   transition: background .4s;
   &:hover {
-    background: rgba(15,89,89, 0.9);
+    background: rgba(20,89,89, 1.5);
   }
  }
 
@@ -90,8 +90,8 @@ input {
   &:focus, &:hover {
     background: rgba(255,255,255,1);
     border: 3px solid #FB6964;
-    width: 520px;
-    height: 55px;
+/*    width: 520px;
+    height: 55px;*/
   }
 }
 
@@ -109,7 +109,7 @@ input {
   transition: all .5s;
   font-weight: 500;
     &:hover {
-      background: rgba(217,50,64,.2);
+      background: rgba(217,50,64,.5);
       width: 210px;
       height: 110px;
       }
