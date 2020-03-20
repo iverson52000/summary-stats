@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Results from './results-component';
 import CustomForm from './customForm-component';
-// import CardContainer from './card-container-component';
 
 
 class App extends Component {
