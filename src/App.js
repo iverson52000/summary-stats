@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Results from './results-component';
 import CustomForm from './customForm-component';
 
-
 class App extends Component {
   constructor(){
     super()

@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const CustomForm = (props) => {
   const { handleInputChange, handleSubmit } = props;
   return (
