@@ -1,7 +1,7 @@
 # Summary Stats Calculator built in React.js
 
 ## Instructions
-1. Install Node.js and npm from https://www.npmjs.com/
+1. Install Node.js and npm from https://www.npmjs.com/get-npm
 2. Run `npm install`
 3. Run `npm start`
 
