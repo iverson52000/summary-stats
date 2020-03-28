@@ -5,8 +5,8 @@ const Results = (props) => {
   return (
     <div className = 'results'>
       <li>Average/Mean: { mean.toFixed(1) }</li>
-      <li>Median: {median}</li>
-      <li>Mode: {mode.toString()}</li>
+      <li>Median: { median }</li>
+      <li>Mode: { mode.toString() }</li>
     </div>
   );
 };

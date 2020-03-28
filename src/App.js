@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Results from './results-component';
-import CustomForm from './customForm-component';
+import Results from './Results';
+import CustomForm from './CustomForm';
 
 class App extends Component {
   constructor(){
@@ -19,9 +19,18 @@ class App extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    const stringArray = this.state.inputString.split(',');
-    let nums = stringArray.map(item => Number(item));
 
+    // Input validation
+    const stringArray = this.state.inputString.split(',');
+    let nums = stringArray.map(item => {
+      if (item !== '') {
+        return Number(item);
+      } else {
+        return NaN;
+      };      
+    });
+
+    // Make API call
     if ((nums.length > 0) && (!nums.includes(NaN))) {
       fetch('http://localhost:3001/', {
         method: 'post',
