@@ -6,8 +6,8 @@
 3. Run `npm start`
 
 ## Components
-* CustomForm: text field and botton
-* Results table: display the results on the page
+* CustomForm: text field and submit botton
+* Results: display the results on the page
 
 ## Callback functions
 * handleInputChange: update the state object when user input numbers
