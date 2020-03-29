@@ -22,13 +22,9 @@ class App extends Component {
 
     // Input validation
     const stringArray = this.state.inputString.split(',');
-    let nums = stringArray.map(item => {
-      if (item !== '') {
-        return Number(item);
-      } else {
-        return NaN;
-      };      
-    });
+    const nums = stringArray.map(item => {
+      return (item !== '') ? Number(item) : NaN;
+      });
 
     // Make API call
     if ((nums.length > 0) && (!nums.includes(NaN))) {
@@ -39,7 +35,7 @@ class App extends Component {
       })
       .then(resp => resp.json())
       .then(res => {
-        this.setState({ mean: res[0], median: res[1], mode: res[2] }, () => console.log(this.state))
+        this.setState({ mean: res[0], median: res[1], mode: res[2] }, () => console.log(this.state));
       })
       .catch((err) => console.log('error occured!'))
     } else {
