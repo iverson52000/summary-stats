@@ -9,7 +9,8 @@ class App extends Component {
       inputString: '',
       mean: 0,
       median: 0,
-      mode: [0]
+      mode: [0],
+      std: 0
     };
   }
   
@@ -35,7 +36,7 @@ class App extends Component {
       })
       .then(resp => resp.json())
       .then(res => {
-        this.setState({ mean: res[0], median: res[1], mode: res[2] }, () => console.log(this.state));
+        this.setState({ mean: res[0], median: res[1], mode: res[2], std: res[3]}, () => console.log(this.state));
       })
       .catch((err) => console.log('error occured!'))
     } else {
@@ -46,6 +47,7 @@ class App extends Component {
 
   render() {
     const { inputString, ...values } = this.state
+    console.log(values)
     return (
       <div>
         <div id = 'background-image'></div>
