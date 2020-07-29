@@ -5,7 +5,10 @@
 2. Run `npm install`
 3. Run `npm start`
 
-## Components
+## Purpose
+This web app let user enter an array of numbers and it will calculate the mean, median, and mode of the number array and display on the screen
+
+## React Components
 * CustomForm: text field and submit botton
 * Results: display the results on the page
 
